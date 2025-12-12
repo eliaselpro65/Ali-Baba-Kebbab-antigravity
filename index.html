@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="AliBaba Soria - Kebab artesanal con ingredientes frescos y nuestro famoso Gratinado">
+    <title>AliBaba Soria - El Tesoro de Soria en un Durum</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-900 text-gray-100">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="text-2xl md:text-3xl font-bold font-heading">
+                    <span class="text-amber-400">Ali</span><span class="text-white">Baba</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio"
+                        class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Inicio</a>
+                    <a href="#carta"
+                        class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Carta</a>
+                    <a href="#contacto"
+                        class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Contacto</a>
+                </div>
+
+                <!-- Cart Button -->
+                <button id="cart-button" class="relative text-gray-300 hover:text-amber-400 transition-colors ml-4">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span id="cart-count"
+                        class="absolute -top-2 -right-2 bg-orange-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-amber-400 transition-colors">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#inicio"
+                        class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Inicio</a>
+                    <a href="#carta"
+                        class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Carta</a>
+                    <a href="#contacto"
+                        class="text-gray-300 hover:text-amber-400 transition-colors duration-300 font-medium">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?w=1920&q=80" alt="Delicious kebab"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-900/80"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <!-- Main Title -->
+            <h1 class="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight">
+                El Tesoro de <span class="text-amber-400">Soria</span><br>
+                en un <span class="text-amber-400">Durum</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-light">
+                Kebab artesanal, ingredientes frescos y nuestro famoso <span
+                    class="text-orange-500 font-semibold">Gratinado</span>
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#carta"
+                    class="px-8 py-4 border-2 border-amber-400 text-amber-400 rounded-lg font-semibold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                    Ver Carta
+                </a>
+                <a href="#contacto"
+                    class="px-8 py-4 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-600/50 w-full sm:w-auto">
+                    Pedir ya
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+            <i class="fas fa-chevron-down text-amber-400 text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-heading mb-4">
+                    ¿Por qué <span class="text-amber-400">Elegirnos</span>?
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Más que un kebab, una experiencia gastronómica que te hará repetir
+                </p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+
+                <!-- Benefit 1 -->
+                <div
+                    class="group bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-amber-500/20 text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-orange-600 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-shipping-fast text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3">Entrega Rápida</h3>
+                    <p class="text-gray-400">
+                        En menos de <span class="text-amber-400 font-semibold">30 minutos</span> en tu puerta
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div
+                    class="group bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-amber-500/20 text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-green-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-leaf text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3">Ingredientes Frescos</h3>
+                    <p class="text-gray-400">
+                        Seleccionados <span class="text-amber-400 font-semibold">diariamente</span> con calidad premium
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div
+                    class="group bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-amber-500/20 text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-amber-600 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-award text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3">Calidad Garantizada</h3>
+                    <p class="text-gray-400">
+                        Más de <span class="text-amber-400 font-semibold">500+ clientes</span> satisfechos
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div
+                    class="group bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-amber-500/20 text-center">
+                    <div
+                        class="w-20 h-20 bg-gradient-to-br from-red-600 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-fire text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-3">Especialidad Única</h3>
+                    <p class="text-gray-400">
+                        Nuestro <span class="text-amber-400 font-semibold">gratinado exclusivo</span> inigualable
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section
+        class="counter-section py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 border-y border-amber-500/20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+
+                <!-- Stat 1 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold font-heading text-amber-400 mb-2">
+                        <span class="counter" data-target="500">0</span>+
+                    </div>
+                    <p class="text-gray-400 text-sm md:text-base">Clientes Satisfechos</p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold font-heading text-amber-400 mb-2">
+                        <span class="counter" data-target="10">0</span>
+                    </div>
+                    <p class="text-gray-400 text-sm md:text-base">Años de Experiencia</p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold font-heading text-amber-400 mb-2">
+                        <span class="counter" data-target="15">0</span>+
+                    </div>
+                    <p class="text-gray-400 text-sm md:text-base">Platos Diferentes</p>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold font-heading text-amber-400 mb-2">
+                        4.<span class="counter" data-target="8">0</span>/5
+                    </div>
+                    <p class="text-gray-400 text-sm md:text-base">Valoración Media</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="carta" class="py-20 bg-slate-900">
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-heading mb-4">
+                    Nuestros <span class="text-amber-400">Tesoros</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto"></div>
+            </div>
+
+            <!-- Featured Product -->
+            <div class="max-w-5xl mx-auto mb-16">
+                <div
+                    class="relative bg-slate-800 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:shadow-amber-500/20 transition-all duration-500 transform hover:scale-[1.02]">
+                    <!-- #1 MÁS VENDIDO Badge -->
+                    <div
+                        class="absolute top-4 right-4 z-10 bg-gradient-to-r from-orange-600 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                        <i class="fas fa-fire mr-1"></i> #1 MÁS VENDIDO
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Image -->
+                        <div class="relative h-64 md:h-full">
+                            <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=800&q=80"
+                                alt="Durum Gratinado" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-r from-slate-800/50 to-transparent"></div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8 flex flex-col justify-center">
+                            <h3 class="text-3xl md:text-4xl font-bold font-heading text-amber-400 mb-3">
+                                Durum Gratinado
+                            </h3>
+                            <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                                Durum relleno al estilo kebab, gratinado con doble queso. Carne recién cortada y salsa
+                                especial.
+                                <span class="text-amber-400 font-semibold">La especialidad de la casa.</span>
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-4xl font-bold text-white">
+                                    8.00<span class="text-2xl text-amber-400">€</span>
+                                </span>
+                                <button data-product="Durum Gratinado" data-price="8.00"
+                                    class="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-shopping-cart mr-2"></i> Añadir
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Mixto Pollo y Ternera -->
+                <div
+                    class="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 hover:shadow-amber-500/30 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80"
+                            alt="Mixto Pollo y Ternera" class="w-full h-full object-cover">
+                        <!-- Badge #2 -->
+                        <div
+                            class="absolute top-3 right-3 bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                            <i class="fas fa-star mr-1"></i> #2 FAVORITO
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-heading text-white mb-2">
+                            Mixto Pollo y Ternera
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Combinación perfecta de pollo y ternera recién cortada
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-amber-400">6.00€</span>
+                            <button data-product="Mixto Pollo y Ternera" data-price="6.00"
+                                class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-sm font-semibold transition-colors">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Durum Normal -->
+                <div
+                    class="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 hover:shadow-amber-500/30 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=600&q=80"
+                            alt="Durum Normal" class="w-full h-full object-cover">
+                        <!-- Badge Popular -->
+                        <div
+                            class="absolute top-3 right-3 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                            <i class="fas fa-thumbs-up mr-1"></i> POPULAR
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-heading text-white mb-2">
+                            Durum Normal
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Durum tamaño normal con ingredientes frescos
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-amber-400">7.00€</span>
+                            <button data-product="Durum Normal" data-price="7.00"
+                                class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-sm font-semibold transition-colors">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kebab con Queso -->
+                <div
+                    class="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 hover:shadow-amber-500/30 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80"
+                            alt="Kebab con Queso" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-heading text-white mb-2">
+                            Kebab con Queso
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Pan de pita con queso fundido y vegetales frescos
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-amber-400">6.50€</span>
+                            <button data-product="Kebab con Queso" data-price="6.50"
+                                class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-sm font-semibold transition-colors">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Falafel Vegetal con Queso -->
+                <div
+                    class="bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 hover:shadow-amber-500/30 hover:border-amber-500/50 transition-all duration-300 transform hover:scale-105">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1593504049359-74330189a345?w=600&q=80"
+                            alt="Falafel Vegetal" class="w-full h-full object-cover">
+                        <!-- Vegetarian Badge -->
+                        <div
+                            class="absolute top-3 right-3 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                            <i class="fas fa-leaf mr-1"></i> VEGETARIANO
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold font-heading text-white mb-2">
+                            Falafel Vegetal con Queso
+                        </h3>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Opción vegetariana con croquetas de garbanzos y queso
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-amber-400">5.00€</span>
+                            <button data-product="Falafel Vegetal con Queso" data-price="5.00"
+                                class="px-4 py-2 bg-orange-600 hover:bg-orange-700 text-white rounded-lg text-sm font-semibold transition-colors">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="py-16 bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full translate-x-1/2 translate-y-1/2">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-4">
+                    <span class="text-white text-sm font-semibold">🎁 OFERTA ESPECIAL</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-bold font-heading text-white mb-4">
+                    2x1 en Durums los Martes
+                </h2>
+                <p class="text-white/90 text-lg mb-8">
+                    Compra un Durum y llévate otro totalmente gratis. Solo los martes.
+                </p>
+                <a href="#carta"
+                    class="inline-block px-10 py-4 bg-white text-orange-600 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+                    ¡Pedir Ahora!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-slate-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-heading mb-4">
+                    ¿Cómo <span class="text-amber-400">Funciona</span>?
+                </h2>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Tan fácil como 1, 2, 3
+                </p>
+            </div>
+
+            <!-- Process Steps -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 max-w-5xl mx-auto relative">
+
+                <!-- Connector Line (Hidden on mobile) -->
+                <div class="hidden md:block absolute top-24 left-0 right-0 h-1 bg-amber-500/30"
+                    style="width: 66%; margin: 0 auto; z-index: 0;"></div>
+
+                <!-- Step 1 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-32 h-32 bg-gradient-to-br from-orange-600 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-orange-500/50 relative z-10">
+                        <i class="fas fa-utensils text-white text-4xl"></i>
+                    </div>
+                    <div class="bg-slate-900 rounded-xl p-6 border border-slate-700">
+                        <div class="text-amber-400 font-bold text-xl mb-3">Paso 1</div>
+                        <h3 class="text-xl font-bold font-heading text-white mb-3">Elige tu Plato</h3>
+                        <p class="text-gray-400">
+                            Explora nuestro menú y selecciona tu kebab favorito. Más de 15 opciones diferentes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-32 h-32 bg-gradient-to-br from-amber-600 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-amber-500/50 relative z-10">
+                        <i class="fas fa-map-marker-alt text-white text-4xl"></i>
+                    </div>
+                    <div class="bg-slate-900 rounded-xl p-6 border border-slate-700">
+                        <div class="text-amber-400 font-bold text-xl mb-3">Paso 2</div>
+                        <h3 class="text-xl font-bold font-heading text-white mb-3">Indica tu Dirección</h3>
+                        <p class="text-gray-400">
+                            Proporciónanos tu ubicación. Entregamos en toda Soria sin coste adicional.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative text-center">
+                    <div
+                        class="w-32 h-32 bg-gradient-to-br from-green-600 to-green-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-green-500/50 relative z-10">
+                        <i class="fas fa-smile-beam text-white text-4xl"></i>
+                    </div>
+                    <div class="bg-slate-900 rounded-xl p-6 border border-slate-700">
+                        <div class="text-amber-400 font-bold text-xl mb-3">Paso 3</div>
+                        <h3 class="text-xl font-bold font-heading text-white mb-3">Disfruta en Casa</h3>
+                        <p class="text-gray-400">
+                            Recibe tu pedido en menos de 30 minutos. Caliente y delicioso, listo para disfrutar.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        // ========================================
+        // SHOPPING CART SYSTEM
+        // ========================================
+
+        let cart = [];
+
+        // Load cart from localStorage
+        function loadCart() {
+            const savedCart = localStorage.getItem('alibaba_cart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+                updateCartUI();
+            }
+        }
+
+        // Save cart to localStorage
+        function saveCart() {
+            localStorage.setItem('alibaba_cart', JSON.stringify(cart));
+        }
+
+        // Add item to cart
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: parseFloat(price),
+                    quantity: 1
+                });
+            }
+
+            saveCart();
+            updateCartUI();
+            showCartNotification(name);
+        }
+
+        // Remove item from cart
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            saveCart();
+            updateCartUI();
+        }
+
+        // Update quantity
+        function updateQuantity(name, change) {
+            const item = cart.find(item => item.name === name);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(name);
+                } else {
+                    saveCart();
+                    updateCartUI();
+                }
+            }
+        }
+
+        // Update cart UI
+        function updateCartUI() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const emptyCart = document.getElementById('empty-cart');
+            const cartCount = document.getElementById('cart-count');
+            const cartSubtotal = document.getElementById('cart-subtotal');
+            const cartTotal = document.getElementById('cart-total');
+            const sendOrderBtn = document.getElementById('checkout-btn');
+
+            // Calculate total items and price
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            // Update cart count badge
+            if (totalItems > 0) {
+                cartCount.textContent = totalItems;
+                cartCount.classList.remove('hidden');
+            } else {
+                cartCount.classList.add('hidden');
+            }
+
+            // Show/hide empty state
+            if (cart.length === 0) {
+                emptyCart.style.display = 'block';
+                sendOrderBtn.disabled = true;
+
+                // Remove any existing cart item elements
+                const existingItems = cartItemsContainer.querySelectorAll('.cart-item');
+                existingItems.forEach(item => item.remove());
+            } else {
+                emptyCart.style.display = 'none';
+                sendOrderBtn.disabled = false;
+
+                // Clear existing items
+                const existingItems = cartItemsContainer.querySelectorAll('.cart-item');
+                existingItems.forEach(item => item.remove());
+
+                // Add cart items
+                cart.forEach(item => {
+                    const cartItemHTML = `
+                        <div class="cart-item bg-slate-800 rounded-lg p-4 mb-3 border border-slate-700">
+                            <div class="flex justify-between items-start mb-3">
+                                <h4 class="text-white font-semibold flex-1">${item.name}</h4>
+                                <button onclick="removeFromCart('${item.name}')" class="text-gray-400 hover:text-red-500 transition-colors ml-2">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-3">
+                                    <button onclick="updateQuantity('${item.name}', -1)" class="w-8 h-8 bg-slate-700 hover:bg-slate-600 rounded text-white transition-colors">
+                                        <i class="fas fa-minus text-xs"></i>
+                                    </button>
+                                    <span class="text-white font-bold w-8 text-center">${item.quantity}</span>
+                                    <button onclick="updateQuantity('${item.name}', 1)" class="w-8 h-8 bg-slate-700 hover:bg-slate-600 rounded text-white transition-colors">
+                                        <i class="fas fa-plus text-xs"></i>
+                                    </button>
+                                </div>
+                                <span class="text-amber-400 font-bold">${(item.price * item.quantity).toFixed(2)}€</span>
+                            </div>
+                        </div>
+                    `;
+                    cartItemsContainer.insertAdjacentHTML('beforeend', cartItemHTML);
+                });
+            }
+
+            // Update totals
+            cartSubtotal.textContent = totalPrice.toFixed(2) + '€';
+            cartTotal.textContent = totalPrice.toFixed(2) + '€';
+        }
+
+        // Show notification when item added
+        function showCartNotification(itemName) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-24 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl z-50 animate-fade-in-down';
+            notification.innerHTML = `
+                <i class="fas fa-check-circle mr-2"></i>
+                "${itemName}" añadido al carrito
+            `;
+            document.body.appendChild(notification);
+
+            // Remove after 2 seconds
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                notification.style.transform = 'translateY(-20px)';
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
+        // Toggle cart sidebar
+        function toggleCart() {
+            const cartSidebar = document.getElementById('cart-sidebar');
+            const cartOverlay = document.getElementById('cart-overlay');
+
+            cartSidebar.classList.toggle('translate-x-full');
+            cartOverlay.classList.toggle('hidden');
+
+            // Prevent body scroll when cart is open
+            if (!cartSidebar.classList.contains('translate-x-full')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Show checkout modal
+        function showCheckoutModal() {
+            if (cart.length === 0) return;
+
+            // Populate checkout summary
+            const checkoutSummary = document.getElementById('checkout-summary');
+            const checkoutTotal = document.getElementById('checkout-total');
+
+            checkoutSummary.innerHTML = '';
+            cart.forEach(item => {
+                checkoutSummary.innerHTML += `
+                    <div class="flex justify-between">
+                        <span>${item.name} x${item.quantity}</span>
+                        <span class="text-amber-400">${(item.price * item.quantity).toFixed(2)}€</span>
+                    </div>
+                `;
+            });
+
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            checkoutTotal.textContent = total.toFixed(2) + '€';
+
+            // Show modal
+            document.getElementById('checkout-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Hide checkout modal
+        function hideCheckoutModal() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            // Clear form
+            document.getElementById('checkout-form').reset();
+        }
+
+        // Submit order to Google Sheets
+        async function submitOrder(event) {
+            event.preventDefault();
+
+            if (cart.length === 0) return;
+
+            const confirmBtn = document.getElementById('confirm-order-btn');
+            const originalText = confirmBtn.innerHTML;
+            confirmBtn.disabled = true;
+            confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Enviando pedido...';
+
+            try {
+                // Get form data
+                const customerName = document.getElementById('customer-name').value;
+                const customerPhone = document.getElementById('customer-phone').value;
+                const customerAddress = document.getElementById('customer-address').value;
+                const customerNotes = document.getElementById('customer-notes').value;
+
+                // Prepare order data with ALL details
+                const orderData = {
+                    nombre: customerName,
+                    telefono: customerPhone,
+                    direccion: customerAddress,
+                    notas: customerNotes || 'Sin notas',
+                    productos: cart.map(item => ({
+                        nombre: item.name,
+                        cantidad: item.quantity,
+                        precioUnitario: item.price.toFixed(2),
+                        precioTotal: (item.price * item.quantity).toFixed(2)
+                    })),
+                    total: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2),
+                    fecha: new Date().toISOString()
+                };
+
+                // Send to Google Sheets
+                const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyh0XaCj3M7sMIKCa3UJmEP3iJQ1htrTZ00_8R-qquVaLXkA2eSfdeSz7RhJ8ivhIeL/exec';
+
+                await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                console.log('✅ Pedido enviado a Google Sheets:', orderData);
+
+                // Show success message
+                hideCheckoutModal();
+                showSuccessMessage(customerName);
+
+                // Clear cart
+                cart = [];
+                saveCart();
+                updateCartUI();
+                toggleCart();
+
+            } catch (error) {
+                console.error('Error al enviar pedido:', error);
+                alert('Hubo un error al enviar el pedido. Por favor, llámanos al 624 39 96 41');
+            } finally {
+                confirmBtn.disabled = false;
+                confirmBtn.innerHTML = originalText;
+            }
+        }
+
+        // Show success message
+        function showSuccessMessage(customerName) {
+            const successDiv = document.createElement('div');
+            successDiv.className = 'fixed inset-0 bg-black bg-opacity-70 z-70 flex items-center justify-center p-4';
+            successDiv.innerHTML = `
+                <div class="bg-slate-900 rounded-2xl max-w-md w-full p-8 text-center shadow-2xl border border-green-500">
+                    <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-check text-white text-4xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-3">¡Pedido Recibido!</h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        Gracias <span class="text-amber-400 font-semibold">${customerName}</span>, hemos recibido tu pedido.
+                    </p>
+                    <div class="bg-slate-800 rounded-lg p-4 mb-6 text-left">
+                        <p class="text-gray-400 mb-2"><i class="fas fa-clock text-amber-400 mr-2"></i>Tiempo estimado: <span class="text-white font-semibold">25-30 minutos</span></p>
+                        <p class="text-gray-400"><i class="fas fa-phone text-amber-400 mr-2"></i>Te llamaremos para confirmar</p>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove(); document.body.style.overflow = 'auto';"
+                        class="px-8 py-3 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white rounded-lg font-bold transition-all transform hover:scale-105 shadow-lg">
+                        Entendido
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(successDiv);
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCart();
+
+            // Cart button click
+            document.getElementById('cart-button').addEventListener('click', toggleCart);
+            document.getElementById('close-cart').addEventListener('click', toggleCart);
+            document.getElementById('cart-overlay').addEventListener('click', toggleCart);
+
+            // Checkout button
+            document.getElementById('checkout-btn').addEventListener('click', showCheckoutModal);
+
+            // Checkout modal controls
+            document.getElementById('cancel-checkout').addEventListener('click', hideCheckoutModal);
+            document.getElementById('checkout-form').addEventListener('submit', submitOrder);
+
+            // Add click listeners to all "Añadir" buttons
+            document.querySelectorAll('[data-product]').forEach(button => {
+                button.addEventListener('click', function () {
+                    const productName = this.getAttribute('data-product');
+                    const productPrice = this.getAttribute('data-price');
+                    addToCart(productName, productPrice);
+                });
+            });
+        });
+
+        // ========================================
+        // MOBILE MENU
+        // ========================================
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+
+        // Smooth Scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+
+                // Skip if it's just '#'
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Counter Animation for Statistics
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // ~60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    element.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            };
+
+            updateCounter();
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+
+                    // Trigger counter animation for stats
+                    if (entry.target.classList.contains('counter-section')) {
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            if (!counter.classList.contains('counted')) {
+                                animateCounter(counter);
+                                counter.classList.add('counted');
+                            }
+                        });
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.add('opacity-0', 'translate-y-8', 'transition-all', 'duration-1000');
+                observer.observe(section);
+            });
+        });
+
+        // Remove animation from WhatsApp button after initial load
+        setTimeout(() => {
+            const whatsappBtn = document.querySelector('a[href^="https://wa.me"]');
+            if (whatsappBtn) {
+                whatsappBtn.classList.remove('animate-pulse');
+            }
+        }, 5000); // Stop pulsing after 5 seconds
+    </script>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cart-sidebar"
+        class="fixed top-0 right-0 h-full w-full md:w-96 bg-slate-900 shadow-2xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+        <!-- Cart Header -->
+        <div class="bg-slate-800 p-6 border-b border-slate-700">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold font-heading text-white">
+                    <i class="fas fa-shopping-cart text-amber-400 mr-2"></i>
+                    Tu Pedido
+                </h2>
+                <button id="close-cart" class="text-gray-400 hover:text-white transition-colors">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Cart Items -->
+        <div id="cart-items" class="flex-1 overflow-y-auto p-6">
+            <!-- Empty state -->
+            <div id="empty-cart" class="text-center py-12">
+                <i class="fas fa-shopping-cart text-6xl text-gray-600 mb-4"></i>
+                <p class="text-gray-400 text-lg">Tu carrito está vacío</p>
+                <p class="text-gray-500 text-sm mt-2">Añade productos de nuestro menú</p>
+            </div>
+
+            <!-- Cart items will be inserted here -->
+        </div>
+
+        <!-- Cart Footer -->
+        <div class="bg-slate-800 p-6 border-t border-slate-700">
+            <!-- Subtotal -->
+            <div class="flex justify-between text-gray-300 mb-2">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">0.00€</span>
+            </div>
+
+            <!-- Total -->
+            <div class="flex justify-between text-white text-xl font-bold mb-6 pt-2 border-t border-slate-700">
+                <span>Total</span>
+                <span id="cart-total">0.00€</span>
+            </div>
+
+            <!-- Order Button -->
+            <button id="checkout-btn"
+                class="w-full bg-gradient-to-r from-orange-600 to-orange-500 text-white py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled>
+                <i class="fas fa-check-circle mr-2"></i>
+                Completar Pedido
+            </button>
+
+            <p class="text-gray-500 text-xs text-center mt-3">
+                <i class="fas fa-clock mr-1"></i>
+                Entrega en 25-30 minutos
+            </p>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div id="cart-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal"
+        class="fixed inset-0 bg-black bg-opacity-70 z-60 hidden flex items-center justify-center p-4">
+        <div
+            class="bg-slate-900 rounded-2xl max-w-md w-full p-8 shadow-2xl border border-slate-700 max-h-[90vh] overflow-y-auto">
+            <!-- Header -->
+            <div class="text-center mb-6">
+                <h2 class="text-3xl font-bold font-heading text-white mb-2">
+                    <i class="fas fa-clipboard-check text-amber-400 mr-2"></i>
+                    Datos de Entrega
+                </h2>
+                <p class="text-gray-400">Completa tus datos para finalizar el pedido</p>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="bg-slate-800 rounded-lg p-4 mb-6 border border-slate-700">
+                <h3 class="text-white font-semibold mb-3 flex items-center">
+                    <i class="fas fa-shopping-bag text-amber-400 mr-2"></i>
+                    Resumen del pedido
+                </h3>
+                <div id="checkout-summary" class="space-y-2 text-sm text-gray-300 mb-3">
+                    <!-- Items will be inserted here -->
+                </div>
+                <div class="border-t border-slate-700 pt-3 mt-3">
+                    <div class="flex justify-between text-white text-lg font-bold">
+                        <span>Total:</span>
+                        <span id="checkout-total" class="text-amber-400">0.00€</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form id="checkout-form" class="space-y-4">
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-2">
+                        <i class="fas fa-user mr-2 text-amber-400"></i>Nombre completo *
+                    </label>
+                    <input type="text" id="customer-name" required
+                        class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                        placeholder="Ej: Juan Pérez">
+                </div>
+
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-2">
+                        <i class="fas fa-phone mr-2 text-amber-400"></i>Teléfono *
+                    </label>
+                    <input type="tel" id="customer-phone" required
+                        class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                        placeholder="Ej: 612 34 56 78">
+                </div>
+
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-2">
+                        <i class="fas fa-map-marker-alt mr-2 text-amber-400"></i>Dirección de entrega *
+                    </label>
+                    <input type="text" id="customer-address" required
+                        class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors"
+                        placeholder="Calle, número, piso, puerta">
+                </div>
+
+                <div>
+                    <label class="block text-gray-300 font-semibold mb-2">
+                        <i class="fas fa-sticky-note mr-2 text-amber-400"></i>Notas adicionales (opcional)
+                    </label>
+                    <textarea id="customer-notes" rows="3"
+                        class="w-full px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-500 focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition-colors resize-none"
+                        placeholder="Ej: Sin cebolla, timbre no funciona, etc."></textarea>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex gap-3 pt-4">
+                    <button type="button" id="cancel-checkout"
+                        class="flex-1 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg font-semibold transition-colors">
+                        Cancelar
+                    </button>
+                    <button type="submit" id="confirm-order-btn"
+                        class="flex-1 px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white rounded-lg font-bold transition-all transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-check mr-2"></i>Confirmar Pedido
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/34624399641" target="_blank" rel="noopener noreferrer"
+        class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 animate-pulse">
+        <i class="fab fa-whatsapp text-white text-3xl"></i>
+    </a>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-slate-800">
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold font-heading mb-4">
+                    Lo que dicen en <span class="text-amber-400">Soria</span>
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto"></div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Testimonial 1 -->
+                <div
+                    class="bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-xl mr-4">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">María González</h4>
+                            <div class="text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "El gratinado está brutal. Pedimos casi cada semana y nunca falla. Rapidez y calidad al 100%."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div
+                    class="bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-xl mr-4">
+                            J
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Javier Ruiz</h4>
+                            <div class="text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Ingredientes frescos, atención súper amable y el mejor kebab de Soria sin duda. ¡Repetimos
+                        seguro!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div
+                    class="bg-slate-900 rounded-xl p-8 border border-slate-700 hover:border-amber-500/50 transition-all duration-300 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div
+                            class="w-12 h-12 bg-amber-400 rounded-full flex items-center justify-center text-slate-900 font-bold text-xl mr-4">
+                            L
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white">Laura Sánchez</h4>
+                            <div class="text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "En menos de 20 minutos en casa. El sabor es increíble y las porciones generosas. ¡Totalmente
+                        recomendable!"
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <!-- Google Maps Section -->
+    <section id="contacto" class="w-full">
+        <div class="w-full h-96">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.2744890850543!2d-2.4681975!3d41.764417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd44fd454e2a3b6b3A0x8ab7f9c40e6e7e7e!2sPaseo%20de%20Santa%20B%C3%A1rbara%2C%2032%2C%2042005%20Soria!5e0!3m2!1ses!2ses!4v1734797024000"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="grayscale contrast-125"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
+
+                <!-- Column 1: Logo and Tagline -->
+                <div>
+                    <div class="text-3xl font-bold font-heading mb-4">
+                        <span class="text-amber-400">Ali</span><span class="text-white">Baba</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        El auténtico sabor del Mediterráneo en tu mesa. Ingredientes frescos, recetas tradicionales y el
+                        mejor servicio de Soria.
+                    </p>
+                    <div class="flex items-center text-amber-400">
+                        <i class="fas fa-award mr-2"></i>
+                        <span class="text-sm font-semibold">Mejor Kebab de Soria 2024</span>
+                    </div>
+                </div>
+
+                <!-- Column 2: Opening Hours -->
+                <div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-4">
+                        <i class="far fa-clock text-amber-400 mr-2"></i>Horarios
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+                            <span class="font-semibold">Lunes - Domingo</span>
+                            <span class="text-amber-400">12:30 - 23:30</span>
+                        </div>
+                        <div class="flex items-start text-sm text-gray-400 mt-4">
+                            <i class="fas fa-info-circle text-amber-400 mr-2 mt-1"></i>
+                            <span>Servicio de entrega a domicilio disponible durante todo el horario</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Contact Information -->
+                <div>
+                    <h3 class="text-xl font-bold font-heading text-white mb-4">
+                        <i class="fas fa-phone text-amber-400 mr-2"></i>Contacto
+                    </h3>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt text-amber-400 w-6"></i>
+                            <a href="tel:+34975123456" class="hover:text-amber-400 transition-colors">
+                                +34 975 12 34 56
+                            </a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-amber-400 w-6"></i>
+                            <a href="mailto:info@alibabasoria.com" class="hover:text-amber-400 transition-colors">
+                                info@alibabasoria.com
+                            </a>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-amber-400 w-6 mt-1"></i>
+                            <span>Paseo Santa Bárbara, 32<br>42005 Soria, España</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-white mb-3">Síguenos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/alibabakebabsoria/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@ali.baba.kebab.so" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-amber-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-110">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-slate-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 AliBaba Soria. Todos los derechos reservados. | Hecho con
+                    <i class="fas fa-heart text-orange-600 mx-1"></i>
+                    en Soria
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
